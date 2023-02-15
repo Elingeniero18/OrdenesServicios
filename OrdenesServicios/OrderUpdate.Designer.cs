@@ -34,7 +34,6 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.txtClient = new System.Windows.Forms.TextBox();
-            this.txtDate = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.cmbCondition = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.IconClose = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconClose)).BeginInit();
@@ -96,13 +96,6 @@
             this.txtClient.Name = "txtClient";
             this.txtClient.Size = new System.Drawing.Size(162, 20);
             this.txtClient.TabIndex = 4;
-            // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(311, 45);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(98, 20);
-            this.txtDate.TabIndex = 5;
             // 
             // txtDesc
             // 
@@ -208,19 +201,27 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dateTimePicker);
             this.panel2.Controls.Add(this.txtDesc);
             this.panel2.Controls.Add(this.lblCliente);
             this.panel2.Controls.Add(this.lblFecha);
             this.panel2.Controls.Add(this.cmbCondition);
             this.panel2.Controls.Add(this.lblDesc);
             this.panel2.Controls.Add(this.lblEstado);
-            this.panel2.Controls.Add(this.txtDate);
             this.panel2.Controls.Add(this.txtClient);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 37);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(440, 247);
             this.panel2.TabIndex = 12;
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker.Location = new System.Drawing.Point(311, 46);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(98, 20);
+            this.dateTimePicker.TabIndex = 8;
             // 
             // OrderUpdate
             // 
@@ -253,7 +254,6 @@
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtClient;
-        private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.ComboBox cmbCondition;
         private System.Windows.Forms.Button btnSave;
@@ -263,5 +263,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconPictureBox IconClose;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }

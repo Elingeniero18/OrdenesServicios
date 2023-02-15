@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Model.service;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Controller
 {
@@ -38,7 +39,7 @@ namespace Controller
                 using (Model.service.servicioEntities db = new Model.service.servicioEntities())
                 {
                     ordenes ObjOrdenes = new ordenes();
-
+                    
                     ObjOrdenes.nombre_cliente = NomCliente;
                     ObjOrdenes.fecha_creacion = fecha;
                     ObjOrdenes.descripcion = descripcion;
@@ -59,5 +60,34 @@ namespace Controller
             }
         }
 
+
+        public void UpdateOrder(int id, string nombre, DateTime fecha, string descripcion, string status) {
+            try
+            {
+                using (Model.service.servicioEntities db = new Model.service.servicioEntities())
+                {
+                    ordenes table = null;
+
+                    table = db.ordenes.Find(id);
+                    table.nombre_cliente = nombre;
+                    table.fecha_creacion = fecha;
+                    table.descripcion = descripcion;
+                    table.estado = status;
+                    db.SaveChanges();
+
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    MessageBox.Show("Modificación en órden realizada.", "Modificar órden de servicio.", buttons);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show("Ocurrió un error al intentar modificar la órden. " +
+                    "Consulte al administrador.", "Modificar órden de servicio", buttons);
+            }
+
+           
+        }
     }
 }

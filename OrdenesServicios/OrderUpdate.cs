@@ -13,6 +13,8 @@ namespace OrdenesServicios
 {
     public partial class OrderUpdate : Form
     {
+        Controller.MainController ObjController = new Controller.MainController();
+        int id;
         public OrderUpdate()
         {
             InitializeComponent();
@@ -35,10 +37,24 @@ namespace OrdenesServicios
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBoxButtons buttons = MessageBoxButtons.OK;
-            MessageBox.Show("Modificación en órden realizada.","Modificar órden de servicio.",buttons);
+            ObjController.UpdateOrder(id, txtClient.Text, dateTimePicker.Value, txtDesc.Text, cmbCondition.Text);
         }
 
+        public void LoadData(int Id, string cliente, string fecha, string descripcion, string estado) {
+        id = Id;
+        txtClient.Text = cliente;
+        dateTimePicker.Text = fecha; 
+        txtDesc.Text = descripcion;
+            if (estado == "Abierto")
+            {
+                cmbCondition.SelectedIndex = 0;
+            }
+            else {
+                cmbCondition.SelectedIndex = 1;
+            }
+        }
+
+        #region icon cerrar
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -48,5 +64,7 @@ namespace OrdenesServicios
         {
             this.Close();
         }
+        #endregion
+
     }
 }
