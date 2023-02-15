@@ -48,9 +48,14 @@ namespace OrdenesServicios
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            DialogResult result = new DialogResult();
-            OrderUpdate objOrderUpdate= new OrderUpdate();
-            result = objOrderUpdate.ShowDialog();
+                DialogResult result = new DialogResult();
+                OrderUpdate objOrderUpdate = new OrderUpdate();
+                objOrderUpdate.LoadData(int.Parse(dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[0].Value.ToString()), 
+                    dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[1].Value.ToString(),
+                  dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[2].Value.ToString(),
+                  dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[3].Value.ToString(),
+                  dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[4].Value.ToString());
+                result = objOrderUpdate.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

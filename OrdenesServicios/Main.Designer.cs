@@ -206,7 +206,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.LightGray;
-            this.btnUpdate.Location = new System.Drawing.Point(3, 110);
+            this.btnUpdate.Location = new System.Drawing.Point(3, 59);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(122, 35);
             this.btnUpdate.TabIndex = 1;
@@ -221,7 +221,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.LightGray;
-            this.btnDelete.Location = new System.Drawing.Point(3, 60);
+            this.btnDelete.Location = new System.Drawing.Point(3, 110);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(122, 35);
             this.btnDelete.TabIndex = 2;
