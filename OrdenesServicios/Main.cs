@@ -60,7 +60,13 @@ namespace OrdenesServicios
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (dgvOrders.SelectedRows.Count>0) {
+                objController.DeleteOrder(int.Parse(dgvOrders.Rows[dgvOrders.CurrentRow.Index].Cells[0].Value.ToString()));
+            }
+            else
+            {
 
+            }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
