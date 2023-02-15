@@ -85,9 +85,32 @@ namespace Controller
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show("Ocurrió un error al intentar modificar la órden. " +
                     "Consulte al administrador.", "Modificar órden de servicio", buttons);
-            }
-
-           
+            }           
         }
+
+        public void DeleteOrder(int id) {
+            try
+            {
+                using (Model.service.servicioEntities db = new Model.service.servicioEntities())
+                {
+                    ordenes table = null;
+
+                    table = db.ordenes.Find(id);
+                    db.ordenes.Remove(table);
+                    db.SaveChanges();
+
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    MessageBox.Show("Órden eliminada.", "Eliminar órden.", buttons);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show("Ocurrió un error al intentar eliminar la órden. " +
+                    "Consulte al administrador.", "Eliminar órden", buttons);
+            }
+        }
+
     }
 }
