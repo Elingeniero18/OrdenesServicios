@@ -13,6 +13,7 @@ namespace OrdenesServicios
 {
     public partial class Main : Form
     {
+        Controller.MainController objController = new Controller.MainController();
         public Main()
         {
             InitializeComponent();
@@ -32,6 +33,11 @@ namespace OrdenesServicios
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            dgvOrders.DataSource = objController.GetOrders();
+        }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
@@ -57,6 +63,7 @@ namespace OrdenesServicios
 
         }
 
+        #region Icon Max,Min,Rest
         private void IconClose_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
@@ -78,7 +85,7 @@ namespace OrdenesServicios
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        #endregion
 
-       
     }
 }
