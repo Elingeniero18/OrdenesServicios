@@ -13,6 +13,9 @@ namespace OrdenesServicios
 {
     public partial class NewOrder : Form
     {
+
+        Controller.MainController ObjController = new Controller.MainController();
+
         public NewOrder()
         {
             InitializeComponent();
@@ -36,8 +39,7 @@ namespace OrdenesServicios
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            MessageBoxButtons buttons = MessageBoxButtons.OK;
-            MessageBox.Show("Órden creada.", "Nueva órden de servicio", buttons);
+            ObjController.InsertOrder(txtNomCliente.Text, FechaPicker.Value, txtDesc.Text,"Abierto");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -49,6 +51,6 @@ namespace OrdenesServicios
         {
             this.Close();
         }
-      
+
     }
 }
