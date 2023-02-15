@@ -32,15 +32,15 @@
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblDesc = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNomCliente = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.IconClose = new FontAwesome.Sharp.IconPictureBox();
             this.PanelCenter = new System.Windows.Forms.Panel();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.FechaPicker = new System.Windows.Forms.DateTimePicker();
             this.PanelBottom = new System.Windows.Forms.Panel();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconClose)).BeginInit();
@@ -78,21 +78,21 @@
             this.lblDesc.TabIndex = 2;
             this.lblDesc.Text = "Descripción de órden:";
             // 
-            // textBox1
+            // txtNomCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtNomCliente.Location = new System.Drawing.Point(82, 31);
+            this.txtNomCliente.Name = "txtNomCliente";
+            this.txtNomCliente.Size = new System.Drawing.Size(181, 20);
+            this.txtNomCliente.TabIndex = 3;
             // 
-            // textBox2
+            // txtDesc
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 139);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(402, 81);
-            this.textBox2.TabIndex = 4;
+            this.txtDesc.Location = new System.Drawing.Point(26, 139);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDesc.Size = new System.Drawing.Size(402, 81);
+            this.txtDesc.TabIndex = 4;
             // 
             // btnCancel
             // 
@@ -167,25 +167,25 @@
             // 
             // PanelCenter
             // 
-            this.PanelCenter.Controls.Add(this.dateTimePicker);
-            this.PanelCenter.Controls.Add(this.textBox2);
+            this.PanelCenter.Controls.Add(this.FechaPicker);
+            this.PanelCenter.Controls.Add(this.txtDesc);
             this.PanelCenter.Controls.Add(this.lblDesc);
             this.PanelCenter.Controls.Add(this.lblCliente);
             this.PanelCenter.Controls.Add(this.lblFecha);
-            this.PanelCenter.Controls.Add(this.textBox1);
+            this.PanelCenter.Controls.Add(this.txtNomCliente);
             this.PanelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelCenter.Location = new System.Drawing.Point(0, 37);
             this.PanelCenter.Name = "PanelCenter";
             this.PanelCenter.Size = new System.Drawing.Size(452, 284);
             this.PanelCenter.TabIndex = 9;
             // 
-            // dateTimePicker
+            // FechaPicker
             // 
-            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker.Location = new System.Drawing.Point(337, 31);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker.TabIndex = 5;
+            this.FechaPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaPicker.Location = new System.Drawing.Point(337, 31);
+            this.FechaPicker.Name = "FechaPicker";
+            this.FechaPicker.Size = new System.Drawing.Size(91, 20);
+            this.FechaPicker.TabIndex = 5;
             // 
             // PanelBottom
             // 
@@ -226,8 +226,8 @@
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblDesc;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNomCliente;
+        private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Panel PanelTop;
@@ -235,6 +235,6 @@
         private FontAwesome.Sharp.IconPictureBox IconClose;
         private System.Windows.Forms.Panel PanelCenter;
         private System.Windows.Forms.Panel PanelBottom;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker FechaPicker;
     }
 }
